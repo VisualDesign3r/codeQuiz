@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Code Quiz</title>
+</head>
+
+<body>
+<div class="jumbotron" style="background-color: burlywood;">
+<h1 style="font-size: 80px;">Code Quiz</h1>
+
+<section id="stopWatch" style="font-size: 30px";>Timer<p id="timer">0</p>
+    <p id="fulltime"></p> 
+   </section> 
+</div>
+
+<div class="container">
+
+
+
+<div class="container">
+    <div id="question" class="question">Questions</div>
+    <label class="btn btn-secondary"><input type="radio" name="options" value="1" /><span id="quest1"></span></label>
+    <label class="btn btn-secondary"><input type="radio" name="options" value="2" /><span id="quest2"></span></label>
+    <label class="btn btn-secondary"><input type="radio" name="options" value="3" /><span id="quest3"></span></label>
+    <label class="btn btn-secondary"><input type="radio" name="options" value="4" /><span id="quest4"></span></label>
+    <br>
+    <button class="btn btn-secondary" style="margin: 5px;"; id="start"onclick="clock();startQuestion(currentQuestion);">Start</button>
+    <button class="btn btn-secondary"  id="next" onclick="NextQuestion();">Next</button><br>
+    <button class="btn btn-secondary"  style="margin: 5px;" id="submit" onclick="clearInterval(setTime);disableButton()">Done</button>
+    <button class="btn btn-secondary"  id="result" onclick="calcScore(score);">Score</button>
+</div>
+</div>
+
+
+
+<script src="questions.js"></script>         
+<script src="script.js"></script> 
+
+
+</body>
+</html>
